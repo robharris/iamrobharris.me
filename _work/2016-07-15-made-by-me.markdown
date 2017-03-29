@@ -1,0 +1,21 @@
+---
+layout: work
+published: true
+title: "Made By Me"
+heading: "made by me website"
+date: 2016-07-15 07:58:00
+imgUrl: made-by-me.jpg
+imgUrlBg: made-by-me-bg.jpg
+headerUrl: made-by-me-header.png
+siteUrl: "http://www.madebyme.org.au/"
+articleId: made-by-me
+---
+
+* ## client
+* ### [made by me](http://www.madebyme.org.au/){:target="_blank"}
+* ## agency
+* ### [tbwa](http://www.whybintbwagroup.com.au){:target="_blank"} \ [digital arts network](http://www.digitalartsnetwork.com.au){:target="_blank"}
+* ## role
+* ### frontend development
+* ## site
+* ### [made by me](http://www.madebyme.org.au/){:target="_blank"}

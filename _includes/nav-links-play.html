@@ -1,0 +1,13 @@
+<div id="nav-links-play" class="nav-links">
+    <ul class="nav-section" id="play">
+        {% assign post = site.play.last %}
+        <li><a href="{{ post.url }}">play</a></li>
+        {% capture isPlay %}{{ include.play }}{% endcapture %}
+        {% if isPlay == "true" %}
+        <li><button id="btn-timeline">timeline</button></li>
+        {% endif %}
+        <li><button id="btn-gamer-tags">gamer tags</button></li>
+        <li><a href="https://www.youtube.com/channel/UCUx4LLSR5YXTN-TP8FIVjiA/" >youtube</a></li>
+        <li><a href="https://www.twitch.tv/sg046">twitch</a></li>
+    </ul>
+</div>

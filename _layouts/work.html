@@ -1,0 +1,50 @@
+---
+layout: compress
+---
+{% include head-top.html param="work" %}
+{% include head-bottom.html %}
+
+<section id="work-outer" class="container nav-container nav-container-animation">
+    {% include nav-work.html %}
+    {% assign sorted = (site.work | sort: 'date') | reverse %}
+    
+    {% for work in sorted %}
+    <div class="work-section" style="background-image: url(/img/work/{{ work.imgUrl }})">
+        <div class="image-overlay"></div>
+        <div class="work-content-section">
+            <img src="/img/work/{{ work.headerUrl }}" />
+            <div class="hr"></div>
+            <h2>{{ work.heading }}</h2>
+            <div class="buttons clearfix">
+                {% capture isSiteUrl %}{{ work.siteUrl }}{% endcapture %}
+                {% if isSiteUrl != "" %}
+                <a href="{{ isSiteUrl }}" class="icon-globe" target="_blank"></a>
+                {% endif %}
+                <button id="btn-info-{{ work.articleId }}" class="icon-info btn-info-i"></button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+    <div id="info-overlay" class="info-overlay">
+        <button id="btn-close-info-overlay" class="hamburger-menu btn-overlay-close"> <div class="bar animate"></div> </button>
+        
+        {% for content in sorted %}
+        
+        <div id="info-{{ content.articleId }}" class="info-content" style="background-image: url(/img/work/{{ content.imgUrlBg }})">
+            <div id="video-overlay"></div>
+            {{ content.content }}
+        </div>
+        
+        {% endfor %}
+    </div>
+    <span class="icon-left-open-1 scroll-arrow"></span>
+</section>
+
+{% include footer-top.html %}
+
+{% javascript_asset_tag js %}
+- _assets/js/work.js
+{% endjavascript_asset_tag %}
+
+{% include footer-bottom.html %} 

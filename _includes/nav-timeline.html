@@ -1,0 +1,29 @@
+<div id="timeline" class="info-overlay">
+        
+    <div class="menu-container is-menu-open">
+        <button id="btn-close-timeline" class="hamburger-menu btn-overlay-close"> 
+            <div class="bar animate"></div> 
+        </button>
+        <a href="/" class="nav-logo"> 
+            <img id="logo-two" src="/img/logo-transparent.png" style="display: block;"> 
+        </a>
+    </div>
+
+    <section id="cd-timeline" class="cd-container">
+
+        {% assign sorted = (site.play | sort: 'date') | reverse %}
+        {% for block in sorted %}
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="/img/hexagon.png">
+            </div> <!-- cd-timeline-img -->
+
+            <a href="{{ block.url }}" class="cd-timeline-content {{ block.category }}">
+                <img src="/img/{{ block.timelineLogo }}" />
+                <p>{{ block.heading | upcase }}</p>
+            </a> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+        {% endfor %}
+    </section> <!-- cd-timeline -->
+
+</div>

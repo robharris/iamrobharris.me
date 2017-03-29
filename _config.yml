@@ -1,0 +1,19 @@
+name: robharris
+url: http://iamrobharris.me
+encoding: bom|utf-8
+highlighter: rouge
+include: 
+  - .htaccess
+exclude: 
+  - _plugins
+collections:
+  work:
+  play:
+    output: true
+    permalink: /:collection/:title/
+asset_pipeline:
+  bundle: true
+  compress: true
+  output_path: assets
+  display_path: assets
+  gzip: true

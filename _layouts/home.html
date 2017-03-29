@@ -1,0 +1,49 @@
+---
+layout: compress
+videoURL: home
+mobileVideoUrl: mobile-bg
+---
+{% include head-top.html  %}
+{% include head-bottom.html %}
+
+<section id="home-outer" class="container">
+    {% include nav-home.html %}
+    <video id="video" autoplay loop poster="/videos/{{ layout.videoURL }}.jpg">
+        <source src="/videos/{{ layout.videoURL }}.webm" type="video/webm">
+        <source src="/videos/{{ layout.videoURL }}.mp4" type="video/mp4">
+        <source src="/videos/{{ layout.videoURL }}.ogv" type="video/ogg">
+    </video>
+    <div id="video-bg" style="background-image: url(/img/{{ layout.mobileVideoUrl }}.gif)"></div>
+    <div id="center-section">
+        <div id="left" class="column-sections">
+            <a href="/work/" class="text">
+                <span>w</span>
+                <span>o</span>
+                <span>r</span>
+                <span>k</span>
+            </a>
+            <a href="/work/" class="icon-code icon"></a>
+        </div>
+        <div id="right" class="column-sections">          
+            <a href="{{ post.url }}" class="icon-gamepad icon"></a>
+            <a href="{{ post.url }}" class="text">
+                <span>p</span>
+                <span>l</span>
+                <span>a</span>
+                <span>y</span>
+            </a>
+        </div>
+    </div>
+    <div id="social" class="clearfix">
+        <a class="twitter" href="https://twitter.com/iamrobharris" target="_blank">twitter</a>
+        <a class="instagram" href="https://www.instagram.com/imrobharris/" target="_blank">instagram</a>
+    </div>
+</section>
+
+{% include footer-top.html %}
+
+{% javascript_asset_tag js %}
+- _assets/js/check-for-mobile.js
+{% endjavascript_asset_tag %}
+
+{% include footer-bottom.html %}
