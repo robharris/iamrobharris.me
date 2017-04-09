@@ -477,7 +477,7 @@ button {
 .pace .pace-progress {
     background: #000;
     position: fixed;
-    z-index: 5000;
+    z-index: 10001;
     top: 0;
     left: 0;
     height: 5px;
